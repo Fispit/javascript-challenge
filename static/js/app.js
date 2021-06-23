@@ -1,11 +1,7 @@
 // from data.js
 var tableData = data;
-
 //Selecting the table body
 var tbody=d3.select("tbody");
-
-
-
 //populating the table with the full dataset
 tableData.forEach((report)=>{
     var row=tbody.append("tr");
@@ -14,10 +10,7 @@ tableData.forEach((report)=>{
         cell.text(value)
     })
 })
-
 var button=d3.select("#filter-btn");   
-
-
 button.on("click",function(){
     //Reading values of text boxes and copying the raw data.
     var datefilter=d3.select("#datetime").property("value"); 
